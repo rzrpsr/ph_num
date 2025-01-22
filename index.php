@@ -5,11 +5,7 @@
 		$pureNumber = preg_replace(["/[^\d]/", "/^00/"], "", $number);
 		if (
 			(strlen($pureNumber) < 10) ||
-			!(bool)preg_match(
-				'/^((\((\+|00(\s|-)?)?\d+\))|((\+|00(\s|-)?)?\d+))(\s|-)?' .
-				'(\(\d+\)(\s|-)?)?(\d+(\s|-)?)+\d+$/',
-				$number
-			)
+			!(bool)preg_match('/^((\(\+?\d+\))|(\+?\d+))(\s|-)?(\(\d+\)(\s|-)?)?(\d+(\s|-)?)+\d+$/', $number)
 		)
 			return false;
 		else
