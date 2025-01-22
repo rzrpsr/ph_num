@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="form_container">
-		<form id="main_form">
+		<form id="main_form" onsubmit="checkNumber(); return false;">
 			<input type=text name="phoneNumber" placeholder="Введите номер..." />
 		</form>
 		<input type=button id="checkNumberBtn" value="Проверить" />
